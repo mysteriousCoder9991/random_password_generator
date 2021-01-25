@@ -9,9 +9,13 @@ public class CreateFile {
 
 		try {
 			FileWriter obj = new FileWriter("password" + Integer.toString(i) + ".txt");
+			FileWriter encObj = new FileWriter("encoded_password" + Integer.toString(i) + ".txt");
 			String passEnc = Base64.getEncoder().encodeToString(pass.getBytes());
 			obj.write(passEnc);
+			passEnc = EncodedHelper.getSHA512(pass);
+			encObj.write(passEnc);
 			obj.close();
+			encObj.close();
 
 		} catch (IOException e) {
 			// TODO Auto-generated catch block

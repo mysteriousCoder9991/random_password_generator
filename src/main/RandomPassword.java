@@ -2,6 +2,7 @@
  * AIM : To create a Random Password generator using Swing and Store it in a file.
  * DEVELOPED BY :RAHUL DHAR
  * VERSION : 1.01.25.07.2020
+ * 			 1.02.25.01.2021 --- Added Refresh button , made some minute modification and implemented SHA-512 encryption
  */
 package main;
 
@@ -90,7 +91,6 @@ public class RandomPassword {
 				JOptionPane.showMessageDialog(frame,
 						"Password successfully saved in the file located in the current directory in encrypted format ");
 				int i = JOptionPane.showConfirmDialog(frame, "Do you want to refesh ?");
-				System.out.println(i);
 				if (i == 0) {
 					result.setText("");
 					len.setText("");
@@ -157,9 +157,10 @@ public class RandomPassword {
 		JButton refreshBtn = new JButton("Refresh ");
 		refreshBtn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				JOptionPane.showMessageDialog(frame, "Refreshing the data ");
+				JOptionPane.showMessageDialog(frame, "Refreshing the data ................");
 				len.setText("");
 				result.setText("");
+				save.setEnabled(false);
 				JOptionPane.showMessageDialog(frame, "Refresh done successfully");
 			}
 		});
@@ -170,7 +171,7 @@ public class RandomPassword {
 		JLabel headingLabel = new JLabel("Random Password Generator");
 		headingLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		headingLabel.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 15));
-		headingLabel.setBounds(44, 11, 393, 23);
+		headingLabel.setBounds(74, 11, 393, 23);
 		frame.getContentPane().add(headingLabel);
 	}
 }

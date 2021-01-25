@@ -63,7 +63,7 @@ public class RandomPassword {
 		frame.getContentPane().setLayout(null);
 
 		len = new JTextField();
-		len.setBounds(146, 45, 159, 20);
+		len.setBounds(146, 45, 247, 20);
 		frame.getContentPane().add(len);
 		len.setColumns(10);
 
@@ -120,7 +120,7 @@ public class RandomPassword {
 				}
 			}
 		});
-		submit.setBounds(146, 89, 159, 23);
+		submit.setBounds(146, 88, 159, 23);
 		frame.getContentPane().add(submit);
 
 		JLabel resLabel = new JLabel("Generated Password");
@@ -129,11 +129,11 @@ public class RandomPassword {
 		resLabel.setBounds(21, 138, 111, 14);
 		frame.getContentPane().add(resLabel);
 
-		JLabel Footer = new JLabel("\u00A9 Rahul Dhar , 2020");
-		Footer.setFont(new Font("Times New Roman", Font.ITALIC, 13));
+		JLabel Footer = new JLabel("\u00A9 Rahul Dhar , 2020-21 . All rights reserved");
+		Footer.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 13));
 		Footer.setForeground(new Color(0, 51, 0));
 		Footer.setHorizontalAlignment(SwingConstants.CENTER);
-		Footer.setBounds(146, 236, 159, 14);
+		Footer.setBounds(21, 236, 481, 14);
 		frame.getContentPane().add(Footer);
 
 		save.setBounds(59, 180, 159, 23);
